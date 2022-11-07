@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
 
 body {
-  margin: 0;
+  margin-top: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  background: #e7e7e7;
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }

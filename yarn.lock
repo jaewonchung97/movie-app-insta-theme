@@ -6065,22 +6065,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"final-project@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "final-project@workspace:."
-  dependencies:
-    "@testing-library/jest-dom": ^5.16.5
-    "@testing-library/react": ^13.4.0
-    "@testing-library/user-event": ^13.5.0
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    react-router-dom: ^6.4.2
-    react-scripts: 5.0.1
-    sass: ^1.55.0
-    web-vitals: ^2.1.4
-  languageName: unknown
-  linkType: soft
-
 "finalhandler@npm:1.2.0":
   version: 1.2.0
   resolution: "finalhandler@npm:1.2.0"
@@ -8707,6 +8691,22 @@ __metadata:
   checksum: 0c91b721bb12c3f9af4b77ebf73604baf350e64d80df91754dc509491ae93bf238581e59c7188360cec7cb62fc4100959245a42cfe01834efedc5e9d068376c2
   languageName: node
   linkType: hard
+
+"movie-app-insta-theme@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "movie-app-insta-theme@workspace:."
+  dependencies:
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^13.4.0
+    "@testing-library/user-event": ^13.5.0
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    react-router-dom: ^6.4.2
+    react-scripts: 5.0.1
+    sass: ^1.55.0
+    web-vitals: ^2.1.4
+  languageName: unknown
+  linkType: soft
 
 "ms@npm:2.0.0":
   version: 2.0.0

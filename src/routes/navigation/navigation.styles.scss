@@ -8,15 +8,7 @@
     outline: none;
 }
 
-body {
-    width: 100%;
-    background: #fafafa;
-    position: relative;
-    font-family: 'roboto', sans-serif;
-}
-
 .navbar {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,8 +16,10 @@ body {
     background: #fff;
     border-bottom: 1px solid #dfdfdf;
     display: flex;
+    position: fixed;
     justify-content: center;
     padding: 5px 0;
+    z-index: 1;
 }
 
 .nav-wrapper {
@@ -45,6 +39,7 @@ body {
 .title-text {
     margin: auto;
     font-family: 'Lobster', cursive;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -59,7 +54,6 @@ body {
     border-radius: 2px;
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    text-transform: capitalize;
 }
 
 .search-box::placeholder {
@@ -80,7 +74,38 @@ body {
 
 .user-profile {
     width: 22px;
-    border-radius: 50%;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Instagram.svg/2048px-Instagram.svg.png);
-    background-size: cover;
+}
+
+
+.page-arrow {
+    display: none
+}
+
+@media screen and (min-width: 1200px) {
+    .page-arrow {
+        display: inline-block;
+        position: fixed;
+        width: 100%;
+        top: 50vh;
+
+        button {
+            background-color: transparent;
+            border: 0;
+        }
+
+        label {
+            font-size: 40px;
+            cursor: pointer;
+        }
+    }
+
+    .page-leftarrow {
+        float: left;
+        margin-left: 2em;
+    }
+
+    .page-rightarrow {
+        float: right;
+        margin-right: 2em;
+    }
 }
