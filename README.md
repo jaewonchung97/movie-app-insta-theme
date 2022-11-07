@@ -4,7 +4,7 @@
 
 
 # ✏️ Structure
-<img src="https://user-images.githubusercontent.com/88214084/200234688-c9119543-c652-47ef-8826-24f2fdee9466.svg" width="500" />
+<img src="https://user-images.githubusercontent.com/88214084/200280903-8202b35d-a98d-479b-905b-0ceb5607ba88.png" width="500" />
 
 
 ## 📄 Pages
