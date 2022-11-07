@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/movie-app-insta-theme/static/css/main.ec95280c.css",
-    "main.js": "/movie-app-insta-theme/static/js/main.da495add.js",
+    "main.css": "/movie-app-insta-theme/static/css/main.021e335a.css",
+    "main.js": "/movie-app-insta-theme/static/js/main.3046f672.js",
     "static/js/8.0bc9ab93.chunk.js": "/movie-app-insta-theme/static/js/8.0bc9ab93.chunk.js",
     "index.html": "/movie-app-insta-theme/index.html",
-    "main.ec95280c.css.map": "/movie-app-insta-theme/static/css/main.ec95280c.css.map",
-    "main.da495add.js.map": "/movie-app-insta-theme/static/js/main.da495add.js.map",
+    "main.021e335a.css.map": "/movie-app-insta-theme/static/css/main.021e335a.css.map",
+    "main.3046f672.js.map": "/movie-app-insta-theme/static/js/main.3046f672.js.map",
     "8.0bc9ab93.chunk.js.map": "/movie-app-insta-theme/static/js/8.0bc9ab93.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec95280c.css",
-    "static/js/main.da495add.js"
+    "static/css/main.021e335a.css",
+    "static/js/main.3046f672.js"
   ]
 }
