@@ -75,37 +75,3 @@
 .user-profile {
     width: 22px;
 }
-
-
-.page-arrow {
-    display: none
-}
-
-@media screen and (min-width: 1200px) {
-    .page-arrow {
-        display: inline-block;
-        position: fixed;
-        width: 100%;
-        top: 50vh;
-
-        button {
-            background-color: transparent;
-            border: 0;
-        }
-
-        label {
-            font-size: 40px;
-            cursor: pointer;
-        }
-    }
-
-    .page-leftarrow {
-        float: left;
-        margin-left: 2em;
-    }
-
-    .page-rightarrow {
-        float: right;
-        margin-right: 2em;
-    }
-}

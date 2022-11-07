@@ -2,6 +2,7 @@ import MoiveListAboutPage from "../../components/movieList/movie-list-about-page
 import "./about.page.style.scss";
 
 export default function About({ movies, isLoading }) {
+  
   return (
     <>
       <header>
@@ -28,7 +29,8 @@ export default function About({ movies, isLoading }) {
             <div className="profile-stats">
               <ul>
                 <li>
-                  <span className="profile-stat-count">{movies.length}</span> moives
+                  <span className="profile-stat-count">{movies.length}</span>{" "}
+                  moives
                 </li>
               </ul>
             </div>
@@ -42,17 +44,14 @@ export default function About({ movies, isLoading }) {
           </div>
         </div>
       </header>
-      {isLoading ? (
-        <div className="loader" />
-      ) : (
-        <div className="container">
-          <div className="gallery">
-            {movies.map((movie) => (
-              <MoiveListAboutPage key={movie.id} movie={movie} />
-            ))}
-          </div>
+      <div className="container">
+        <div className="gallery">
+          {movies.map((movie) => (
+            <MoiveListAboutPage key={movie.id} movie={movie} />
+          ))}
         </div>
-      )}
+      </div>
+      {isLoading ? <div className="loader" /> : <></>}
     </>
   );
 }
