@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movie-app-insta-theme/static/css/main.ec95280c.css",
+    "main.js": "/movie-app-insta-theme/static/js/main.da495add.js",
+    "static/js/8.0bc9ab93.chunk.js": "/movie-app-insta-theme/static/js/8.0bc9ab93.chunk.js",
+    "index.html": "/movie-app-insta-theme/index.html",
+    "main.ec95280c.css.map": "/movie-app-insta-theme/static/css/main.ec95280c.css.map",
+    "main.da495add.js.map": "/movie-app-insta-theme/static/js/main.da495add.js.map",
+    "8.0bc9ab93.chunk.js.map": "/movie-app-insta-theme/static/js/8.0bc9ab93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec95280c.css",
+    "static/js/main.da495add.js"
+  ]
+}
