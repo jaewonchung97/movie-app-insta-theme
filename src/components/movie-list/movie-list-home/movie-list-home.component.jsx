@@ -1,9 +1,9 @@
-import "./movieListAboutPage.style.scss";
+import './movie-list-home.style.scss';
 import { useNavigate } from "react-router-dom";
 import { movieDetailContext } from "../../../context/movie-detail.context";
 import { useContext } from "react";
 
-export default function MoiveListAboutPage({ movie }) {
+export default function MovieListInHome({ movie }) {
   const { id, large_cover_image, year, title } = movie;
   const navigate = useNavigate();
   const { setSelectedMovieId } = useContext(movieDetailContext);

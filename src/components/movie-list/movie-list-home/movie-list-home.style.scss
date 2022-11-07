@@ -1,15 +1,13 @@
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin: -1rem -1rem;
     padding-bottom: 3rem;
 }
 
 .gallery-item {
     position: relative;
-    max-width: 285px;
+    max-width: 280px;
     flex: 1 0 22rem;
-    margin: 1rem;
     color: #fff;
     cursor: pointer;
 }

@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import "./navigation.styles.scss";
+import "./navigation.style.scss";
 
 export default function Navigation({ searchFieldState, pageState }) {
   const { searchField, setSearchField } = searchFieldState;

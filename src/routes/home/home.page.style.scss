@@ -37,7 +37,6 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Profile Section */
 
 .profile {
     padding: 5rem 0;
@@ -126,8 +125,6 @@
 }
 
 
-/* Loader */
-
 .loader {
     width: 5rem;
     height: 5rem;
@@ -138,7 +135,6 @@
     animation: loader 500ms linear infinite;
 }
 
-/* Spinner Animation */
 
 @keyframes loader {
     to {
@@ -146,10 +142,6 @@
     }
 }
 
-
-
-
-/* Media Query */
 
 @media screen and (max-width: 40rem) {
     .profile {
@@ -231,13 +223,6 @@
     }
 }
 
-/*
-
-The following code will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
-
-*/
 
 @supports (display: grid) {
     .profile {

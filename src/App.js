@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "./routes/about/about.page";
 import HomePage from "./routes/home/home.page";
-import Navigation from "./routes/navigation/navigation.page";
+import MovieDetailPage from "./routes/movie-detail/movie-detail.page";
+import Navigation from "./routes/navigation/navigation.component";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -34,7 +34,6 @@ function App() {
     func();
   }, [isReached]);
 
-
   async function getMovies() {
     const fetchUrl =
       "https://yts.mx/api/v2/list_movies.json?page=" + page.toString();
@@ -48,9 +47,7 @@ function App() {
             if (prev.length === 0) {
               return fetchedMovies;
             } else {
-              if (
-                prev.find(movie => movie.id === fetchedMovies[0].id)
-              ) {
+              if (prev.find((movie) => movie.id === fetchedMovies[0].id)) {
                 return prev;
               } else {
                 return prev.concat(fetchedMovies);
@@ -93,18 +90,18 @@ function App() {
           }
         >
           <Route
-            path={"/movies"}
-            element={
-              <HomePage
-                movies={filteredMovies}
-                isLoading={isLoading}
-                method={{setPage, getMovies}}
-              />
-            }
+            index={true}
+            element={<HomePage movies={filteredMovies} isLoading={isLoading} />}
           />
           <Route
-            index={true}
-            element={<About movies={filteredMovies} isLoading={isLoading} />}
+            path={"/movies"}
+            element={
+              <MovieDetailPage
+                movies={filteredMovies}
+                isLoading={isLoading}
+                method={{ setPage, getMovies }}
+              />
+            }
           />
         </Route>
       </Routes>

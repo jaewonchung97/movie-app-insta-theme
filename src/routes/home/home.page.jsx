@@ -1,15 +1,57 @@
-import LoadingIcon from "../../components/loading-icon/loading-icon.component";
-import MovieList from "../../components/movieList/movie-list-home-page/movieList.component";
-import { useState, useEffect } from "react";
+import './home.page.style.scss';
+import MoiveListInHome from "../../components/movie-list/movie-list-home/movie-list-home.component";
 
-export default function HomePage({ movies, isLoading, method }) {
-
+export default function HomePage({ movies, isLoading }) {
+  
   return (
     <>
-      {movies.map((movie) => {
-        return <MovieList key={movie.id} movie={movie} />;
-      })}
-      {isLoading ? <LoadingIcon /> : <></>}
+      <header>
+        <div className="container">
+          <div className="profile">
+            <div className="profile-image">
+              <img
+                src="https://marketplace.canva.cn/sfRBM/MAEuwrsfRBM/2/tl/canva-MAEuwrsfRBM.png"
+                alt=""
+              />
+            </div>
+
+            <div className="profile-user-settings">
+              <h1 className="profile-user-name">Jaewon Chung</h1>
+
+              <button
+                className="btn profile-settings-btn"
+                aria-label="profile settings"
+              >
+                <i className="fas fa-cog" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div className="profile-stats">
+              <ul>
+                <li>
+                  <span className="profile-stat-count">{movies.length}</span>{" "}
+                  moives
+                </li>
+              </ul>
+            </div>
+
+            <div className="profile-bio">
+              <p>
+                <span className="profile-real-name">Jaewon Chung</span> Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className="container">
+        <div className="gallery">
+          {movies.map((movie) => (
+            <MoiveListInHome key={movie.id} movie={movie} />
+          ))}
+        </div>
+      </div>
+      {isLoading ? <div className="loader" /> : <></>}
     </>
   );
 }

@@ -1,6 +1,6 @@
-import "./movieList.styles.scss";
+import "./movie-detail.scss";
 
-export default function MovieList({ movie }) {
+export default function MovieDetailList({ movie }) {
   const {
     id,
     title,
