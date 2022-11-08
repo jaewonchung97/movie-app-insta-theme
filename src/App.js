@@ -12,10 +12,14 @@ function App() {
   const [page, setPage] = useState(1);
   const [isReached, setIsReached] = useState(false);
 
+  useEffect(() => {
+    getMovies();
+  }, []);
+
   window.addEventListener("scroll", () => {
-    let scrollLocation = document.documentElement.scrollTop;
-    let windowHeight = window.innerHeight;
-    let fullHeight = document.body.scrollHeight;
+    const scrollLocation = document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.body.scrollHeight;
     if (scrollLocation + windowHeight >= fullHeight) {
       setIsReached(true);
     }
@@ -24,8 +28,10 @@ function App() {
   useEffect(() => {
     const func = async () => {
       if (isReached) {
+        setIsLoading(true);
         setPage((prev) => prev + 1);
         await getMovies();
+        setIsLoading(false);
         setTimeout(() => {
           setIsReached(false);
         }, 1500);
@@ -62,15 +68,6 @@ function App() {
   }
 
   useEffect(() => {
-    const fetchMovies = async () => {
-      setIsLoading(true);
-      await getMovies();
-      setIsLoading(false);
-    };
-    fetchMovies();
-  }, [page]);
-
-  useEffect(() => {
     const newFilteredMovies = movies.filter((movie) =>
       movie.title.toLocaleLowerCase().includes(searchField)
     );
@@ -83,10 +80,7 @@ function App() {
         <Route
           path={"/"}
           element={
-            <Navigation
-              searchFieldState={{ searchField, setSearchField }}
-              pageState={{ page, setPage }}
-            />
+            <Navigation searchFieldState={{ searchField, setSearchField }} />
           }
         >
           <Route
@@ -96,11 +90,7 @@ function App() {
           <Route
             path={"/movies"}
             element={
-              <MovieDetailPage
-                movies={filteredMovies}
-                isLoading={isLoading}
-                method={{ setPage, getMovies }}
-              />
+              <MovieDetailPage movies={filteredMovies} isLoading={isLoading} />
             }
           />
         </Route>

@@ -9,9 +9,11 @@ export default function MovieListInHome({ movie }) {
   const { setSelectedMovieId } = useContext(movieDetailContext);
 
   const onClickHandler = async () => {
+    console.log(id);
     setSelectedMovieId(id);
     await navigate('/movies');
-    var location = document.getElementById(id).offsetTop;
+    const location = document.getElementById(id).offsetTop;
+    console.log(location);
     window.scrollTo({top:location - 30 , behavior:'smooth'});
   }
 
